@@ -1,0 +1,1 @@
+INSERT INTO test.user (id, action, alive, create_address, create_date, create_user, update_address, update_date, update_user, job_number, name) VALUES ('2c948a8a69132a2d0169133d8be30000', true, true, '127.0.0.1', '2019-02-22 03:26:34', 'TEST', '127.0.0.1', '2019-02-22 03:26:34', 'TEST', 'X01', '測試人員');

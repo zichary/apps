@@ -1,0 +1,18 @@
+<!DOCTYPE root>
+<root label="Building management system">
+    <import label="pare" src="pare/pare_index.zul"/> <!-- 巡邏回報系統 -->
+    <import label="anpl" src="anpl/anpl_index.zul"/> <!-- 年度計畫 -->
+    <import label="pack" src="pack/pack_index.zul"/> <!-- 郵件系統 -->
+    <import label="vist" src="vist/vist_index.zul"/> <!-- 訪客系統 -->
+    <import label="push" src="push/push_index.zul"/> <!-- 公告推播系統 -->
+    <import label="tran" src="tran/tran_index.zul"/> <!-- 轉交系統 -->
+    <import label="hous" src="hous/hous_index.zul"/> <!-- 住戶資料系統 -->
+    <import label="clou" src="clou/clou_index.zul"/> <!-- 雲端上傳系統 -->
+    <import label="spec" src="spec/spec_index.zul"/> <!-- 特約商店 -->
+    <import label="regu" src="regu/regu_index.zul"/> <!-- 規章瀏覽區 -->
+    <import label="mana" src="mana/mana_index.zul"/> <!-- 管理費系統 -->
+    <import label="publ" src="publ/publ_index.zul"/> <!-- 公設使用系統 -->
+    <import label="gues" src="gues/gues_index.zul"/> <!-- 來賓車位系統 -->
+    <import label="prop" src="prop/prop_index.zul"/> <!-- 單位財產系統 -->
+    <import label="mess" src="mess/mess_index.zul"/> <!-- 留言版 -->
+</root>

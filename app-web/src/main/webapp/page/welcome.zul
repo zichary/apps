@@ -1,0 +1,53 @@
+<zk>
+    <!-- menu Start -->
+    <div>
+        <button label="${labels.menu.pare}" image="/images/zkpowered_l.png" width="250px" height="250px"
+                orient="vertical" dir="reverse" target="_self"
+                onClick="@command('navigate', page='pare',label=self.label)"/>
+        <button label="${labels.menu.anpl}" image="/images/zkpowered_l.png" width="250px" height="250px"
+                orient="vertical" dir="reverse" target="_self"
+                onClick="@command('navigate', page='anpl',label=self.label)"/>
+        <button label="${labels.menu.pack}" image="/images/zkpowered_l.png" width="250px" height="250px"
+                orient="vertical" dir="reverse" target="_self"
+                onClick="@command('navigate', page='pack',label=self.label)"/>
+        <button label="${labels.menu.vist}" image="/images/zkpowered_l.png" width="250px" height="250px"
+                orient="vertical" dir="reverse" target="_self"
+                onClick="@command('navigate', page='vist',label=self.label)"/>
+        <button label="${labels.menu.push}" image="/images/zkpowered_l.png" width="250px" height="250px"
+                orient="vertical" dir="reverse" target="_self"
+                onClick="@command('navigate', page='push',label=self.label)"/>
+        <separator height="10px"/>
+        <button label="${labels.menu.tran}" image="/images/zkpowered_l.png" width="250px" height="250px"
+                orient="vertical" dir="reverse" target="_self"
+                onClick="@command('navigate', page='tran',label=self.label)"/>
+        <button label="${labels.menu.hous}" image="/images/zkpowered_l.png" width="250px" height="250px"
+                orient="vertical" dir="reverse" target="_self"
+                onClick="@command('navigate', page='hous',label=self.label)"/>
+        <button label="${labels.menu.clou}" image="/images/zkpowered_l.png" width="250px" height="250px"
+                orient="vertical" dir="reverse" target="_self"
+                onClick="@command('navigate', page='clou',label=self.label)"/>
+        <button label="${labels.menu.spec}" image="/images/zkpowered_l.png" width="250px" height="250px"
+                orient="vertical" dir="reverse" target="_self"
+                onClick="@command('navigate', page='spec',label=self.label)"/>
+        <button label="${labels.menu.regu}" image="/images/zkpowered_l.png" width="250px" height="250px"
+                orient="vertical" dir="reverse" target="_self"
+                onClick="@command('navigate', page='regu',label=self.label)"/>
+        <separator height="10px"/>
+        <button label="${labels.menu.mana}" image="/images/zkpowered_l.png" width="250px" height="250px"
+                orient="vertical" dir="reverse" target="_self"
+                onClick="@command('navigate', page='mana',label=self.label)"/>
+        <button label="${labels.menu.publ}" image="/images/zkpowered_l.png" width="250px" height="250px"
+                orient="vertical" dir="reverse" target="_self"
+                onClick="@command('navigate', page='publ',label=self.label)"/>
+        <button label="${labels.menu.gues}" image="/images/zkpowered_l.png" width="250px" height="250px"
+                orient="vertical" dir="reverse" target="_self"
+                onClick="@command('navigate', page='gues',label=self.label)"/>
+        <button label="${labels.menu.prop}" image="/images/zkpowered_l.png" width="250px" height="250px"
+                orient="vertical" dir="reverse" target="_self"
+                onClick="@command('navigate', page='prop',label=self.label)"/>
+        <button label="${labels.menu.mess}" image="/images/zkpowered_l.png" width="250px" height="250px"
+                orient="vertical" dir="reverse" target="_self"
+                onClick="@command('navigate', page='mess',label=self.label)"/>
+    </div>
+    <!-- menu End -->
+</zk>
