@@ -1,6 +1,5 @@
 package com.apps.entity;
 
-import com.apps.entity.base.BaseDao;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;

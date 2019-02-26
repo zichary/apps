@@ -1,7 +1,6 @@
 package com.apps.service;
 
 import com.apps.entity.UserDao;
-import com.apps.service.base.BaseService;
 import org.springframework.data.domain.Page;
 
 import java.util.List;
