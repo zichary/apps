@@ -10,12 +10,12 @@ import org.springframework.data.jpa.convert.threeten.Jsr310JpaConverters;
  *
  * @author SimonYang
  */
-@EntityScan(basePackageClasses = {Application.class, Jsr310JpaConverters.class})
+@EntityScan(basePackageClasses = {WebApplication.class, Jsr310JpaConverters.class})
 @SpringBootApplication
-public class Application {
+public class WebApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+        SpringApplication.run(WebApplication.class, args);
     }
 
 }
