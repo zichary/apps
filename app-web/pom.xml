@@ -18,6 +18,19 @@
             <groupId>${project.groupId}</groupId>
             <artifactId>app-server</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>org.zkoss.zkspringboot</groupId>
+            <artifactId>zkspringboot-starter</artifactId>
+            <version>1.0.4</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.zkoss.zk</groupId>
+            <artifactId>zkplus</artifactId>
+            <version>8.6.0.1</version>
+        </dependency>
+
     </dependencies>
 
     <build>

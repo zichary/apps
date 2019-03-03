@@ -7,6 +7,7 @@
         <module>app-server</module>
         <module>app-web</module>
         <module>app-lib</module>
+        <module>app-websocket</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -25,14 +26,10 @@
         <app-server.version>0.0.1-SNAPSHOT</app-server.version>
         <app-web.version>0.0.1-SNAPSHOT</app-web.version>
         <app-lib.version>0.0.1-SNAPSHOT</app-lib.version>
+        <app-websocket.version>0.0.1-SNAPSHOT</app-websocket.version>
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>org.zkoss.zkspringboot</groupId>
-            <artifactId>zkspringboot-starter</artifactId>
-            <version>1.0.4</version>
-        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
@@ -40,11 +37,6 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-configuration-processor</artifactId>
-            <optional>true</optional>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -56,26 +48,18 @@
             <artifactId>commons-lang3</artifactId>
             <version>3.8.1</version>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
             <version>27.0.1-jre</version>
         </dependency>
-
-        <dependency>
-            <groupId>org.zkoss.zk</groupId>
-            <artifactId>zkplus</artifactId>
-            <version>8.6.0.1</version>
-        </dependency>
-
     </dependencies>
+
 
     <dependencyManagement>
         <dependencies>
@@ -93,6 +77,11 @@
                 <groupId>${project.groupId}</groupId>
                 <artifactId>app-lib</artifactId>
                 <version>${app-lib.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>app-websocket</artifactId>
+                <version>${app-websocket.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
