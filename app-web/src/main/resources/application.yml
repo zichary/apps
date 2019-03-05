@@ -6,6 +6,10 @@ spring:
     password: rootadmin
     data: classpath:import.sql
     continue-on-error: true
+  boot:
+    admin:
+      client:
+        url: http://localhost:8089
   jpa:
     generate-ddl: true
     hibernate:
