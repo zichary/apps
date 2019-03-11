@@ -12,7 +12,7 @@ import javax.persistence.Table;
  * 用戶資訊
  *
  * @author SimonYang
- * @date 2019/2/10
+ * @date 2019 /2/10
  */
 @Getter
 @Setter
@@ -27,6 +27,12 @@ public class UserDao extends BaseDao {
     /** 工號 */
     private String jobNumber;
 
+    /**
+     * Instantiates a new User dao.
+     *
+     * @param other
+     *         the other
+     */
     public UserDao(UserDao other) {
         super(other);
         this.name = other.name;

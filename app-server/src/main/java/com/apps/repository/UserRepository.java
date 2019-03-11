@@ -7,8 +7,10 @@ import org.springframework.stereotype.Repository;
 import java.util.Optional;
 
 /**
+ * The interface User repository.
+ *
  * @author SimonYang
- * @date 2019/2/10
+ * @date 2019 /2/10
  */
 @Repository
 public interface UserRepository extends JpaRepository<UserDao, String> {
@@ -18,7 +20,7 @@ public interface UserRepository extends JpaRepository<UserDao, String> {
      *
      * @param name
      *         String 姓名
-     * @return UserInfo
+     * @return UserInfo optional
      */
     Optional<UserDao> findByName(String name);
 

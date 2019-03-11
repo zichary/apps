@@ -10,7 +10,7 @@ import java.util.Optional;
  * 用戶操作介面
  *
  * @author SimonYang
- * @date 2019/2/10
+ * @date 2019 /2/10
  */
 public interface UserService extends BaseService<UserDao> {
 
@@ -19,21 +19,21 @@ public interface UserService extends BaseService<UserDao> {
      *
      * @param name
      *         String 姓名
-     * @return Optional<UserDao>
+     * @return Optional<UserDao> user by name
      */
     Optional<UserDao> getUserByName(String name);
 
     /**
      * 獲取最新的用戶
      *
-     * @return List<UserInfo>
+     * @return List<UserInfo> current user list
      */
     List<UserDao> getCurrentUserList();
 
     /**
      * 獲取分頁的用戶
      *
-     * @return Page<UserInfo>
+     * @return Page<UserInfo> page user list
      */
     Page<UserDao> getPageUserList();
 }
