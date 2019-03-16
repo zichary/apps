@@ -6,17 +6,12 @@ import java.util.Optional;
 /**
  * 基礎介面
  *
+ * @param <T>
+ *         the type parameter
  * @author SimonYang
- * @date 2019/2/10
+ * @date 2019 /2/10
  */
-public interface BaseService<T> {
-
-    /**
-     * 取得清單
-     *
-     * @return List<T>
-     */
-    List<T> getAllList();
+public interface BaseService<T, ID> {
 
     /**
      * 新增
@@ -24,10 +19,10 @@ public interface BaseService<T> {
      * @param t
      *         T 操作物件
      * @param user
-     *         String 用戶
+     *         String 操作者名稱
      * @param ip
-     *         String ip
-     * @return Optional<T>
+     *         String 操作者ip
+     * @return Optional<T>  optional
      */
     Optional<T> save(T t, String user, String ip);
 
@@ -37,31 +32,49 @@ public interface BaseService<T> {
      * @param id
      *         String 操作物件id
      * @param user
-     *         String 用戶
+     *         String 操作者名稱
      * @param ip
-     *         String ip
-     * @return Optional<T>
+     *         String 操作者ip
+     * @return Optional<T>  optional
      */
-    Optional<T> remove(String id, String user, String ip);
-
-    /**
-     * 啟用/停用
-     *
-     * @param id
-     *         String 操作物件id
-     * @param user
-     *         String 用戶
-     * @param ip
-     *         String ip
-     * @return Optional<T>
-     */
-    Optional<T> enable(String id, String user, String ip);
+    Optional<T> remove(ID id, String user, String ip);
 
     /**
      * 刪除(不保留檔案)
      *
      * @param id
-     *         String ID
+     *         String 紀錄ID
      */
-    void delete(String id);
+    void delete(ID id);
+
+    /**
+     * 取得清單
+     *
+     * @return List<T>  list
+     */
+    List<T> findAllList();
+
+    /**
+     * 使用ID取得物件
+     *
+     * @param id
+     *         String 物件ID
+     * @return optional optional
+     */
+    Optional<T> findById(ID id);
+
+    /**
+     * 啟用/停用
+     *
+     * @param id
+     *         ID 操作物件id
+     * @param user
+     *         String 操作者名稱
+     * @param ip
+     *         String 操作者ip
+     * @return Optional<T>  optional
+     */
+    Optional<T> enable(ID id, String user, String ip);
+
+
 }
