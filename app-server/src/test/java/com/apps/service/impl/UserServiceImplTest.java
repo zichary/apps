@@ -25,7 +25,7 @@ public class UserServiceImplTest {
 
     @Test
     public void getAllList() {
-        List<UserDao> list = userService.getAllList();
+        List<UserDao> list = userService.findAllList();
         log.info("資料長度：{}", list.size());
     }
 }
