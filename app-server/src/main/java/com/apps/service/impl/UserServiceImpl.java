@@ -9,6 +9,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -18,103 +19,52 @@ import java.util.Optional;
  * 用戶操作
  *
  * @author SimonYang
+ * @version 1.0.0
  * @date 2019 /2/10
  */
 @Slf4j
 @Service("userService")
-public class UserServiceImpl implements UserService {
+public class UserServiceImpl extends BaseServiceImpl<UserDao, String> implements UserService {
+
+    private final UserRepository repository;
 
     @Autowired
-    private UserRepository userRepository;
-
-    @Override
-    public List<UserDao> getAllList() {
-        List<UserDao> userList = null;
-        try {
-            userList = userRepository.findAll();
-        } catch (Exception e) {
-            log.error(e.getMessage(), e);
-        }
-        return userList;
+    public UserServiceImpl(UserRepository repository) {
+        super(repository);
+        this.repository = repository;
     }
 
     @Override
-    public Optional<UserDao> save(UserDao userDao, String user, String ip) {
-        Optional<UserDao> optional = Optional.empty();
+    public Optional<UserDao> findByUserName(String name) {
+        Optional<UserDao> optional;
         try {
-            userDao.saveData(user, ip);
-            optional = Optional.of(userRepository.save(userDao));
+            optional = repository.findByUsername(name);
         } catch (Exception e) {
             log.error(e.getMessage(), e);
+            throw e;
         }
         return optional;
     }
 
     @Override
-    public Optional<UserDao> remove(String id, String user, String ip) {
-        Optional<UserDao> optional = Optional.empty();
-        try {
-            Optional<UserDao> userDaoOptional = userRepository.findById(id);
-            if (userDaoOptional.isPresent()) {
-                UserDao userDao = userDaoOptional.get();
-                userDao.dead(user, ip);
-                optional = Optional.of(userRepository.save(userDao));
-            }else{
-                log.error("無此紀錄");
-            }
-        } catch (Exception e) {
-            log.error(e.getMessage(), e);
+    public UserDao loadUserByUsername(String username) throws UsernameNotFoundException {
+        Optional<UserDao> optional = this.findByUserName(username);
+        if (optional.isPresent()) {
+            return optional.get();
+        } else {
+            throw new UsernameNotFoundException("UserName " + username + " not found");
         }
-        return optional;
-    }
-
-    @Override
-    public Optional<UserDao> enable(String id, String user, String ip) {
-        Optional<UserDao> optional = Optional.empty();
-        try {
-            Optional<UserDao> userDaoOptional = userRepository.findById(id);
-            if (userDaoOptional.isPresent()) {
-                UserDao userDao = userDaoOptional.get();
-                userDao.enable(user, ip);
-                optional = Optional.of(userRepository.save(userDao));
-            }else{
-                log.error("無此紀錄");
-            }
-        } catch (Exception e) {
-            log.error(e.getMessage(), e);
-        }
-        return optional;
-    }
-
-    @Override
-    public void delete(String id) {
-        try {
-            userRepository.deleteById(id);
-        } catch (Exception e) {
-            log.error(e.getMessage(), e);
-        }
-    }
-
-    @Override
-    public Optional<UserDao> getUserByName(String name) {
-        Optional<UserDao> optional = Optional.empty();
-        try {
-            optional = userRepository.findByName(name);
-        } catch (Exception e) {
-            log.error(e.getMessage(), e);
-        }
-        return optional;
     }
 
     @Override
     public List<UserDao> getCurrentUserList() {
         Sort sort = new Sort(Sort.Direction.DESC, "createDate");
-        return userRepository.findAll(sort);
+        return repository.findAll(sort);
     }
 
     @Override
     public Page<UserDao> getPageUserList() {
         Pageable pageable = PageRequest.of(0, 5, Sort.by(Sort.Direction.DESC, "createTime"));
-        return userRepository.findAll(pageable);
+        return repository.findAll(pageable);
     }
 }
