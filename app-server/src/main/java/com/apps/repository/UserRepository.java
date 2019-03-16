@@ -10,6 +10,7 @@ import java.util.Optional;
  * The interface User repository.
  *
  * @author SimonYang
+ * @version 1.0.0
  * @date 2019 /2/10
  */
 @Repository
@@ -18,12 +19,11 @@ public interface UserRepository extends JpaRepository<UserDao, String> {
     /**
      * 用姓名查詢用戶
      *
-     * @param name
+     * @param username
      *         String 姓名
      * @return UserInfo optional
      */
-    Optional<UserDao> findByName(String name);
-
+    Optional<UserDao> findByUsername(String username);
 
 
 }
