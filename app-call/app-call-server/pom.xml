@@ -2,20 +2,19 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-    <modules>
-        <module>app-web-server</module>
-        <module>app-web-client</module>
-    </modules>
-
     <parent>
-        <artifactId>core</artifactId>
         <groupId>com.apps</groupId>
+        <artifactId>app-call</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
+    <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>app-web</artifactId>
-    <packaging>pom</packaging>
-    <name>app-web</name>
+    <artifactId>app-call-server</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>app-lib</artifactId>
+        </dependency>
+    </dependencies>
 </project>

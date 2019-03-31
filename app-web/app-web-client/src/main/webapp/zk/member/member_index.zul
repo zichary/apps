@@ -1,0 +1,6 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+    <window title="new page title" border="normal" viewModel="@id('vm') @init('com.apps.vm.MemberVM)">
+        會員管理
+    </window>
+</zk>

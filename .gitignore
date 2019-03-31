@@ -25,19 +25,13 @@
 hs_err_pid*
 
 .idea/
-app-server/app-server.iml
-app-server/src/main/resources/
 app-server/target/classes/META-INF/
 app-server/target/generated-sources/
 app-server/target/generated-test-sources/
 app-server/target/test-classes/application.yml
-app-web/app-web.iml
-app-web/src/main/java/com/apps/vm/
-app-web/src/test/
 app-web/target/classes/META-INF/
 app-web/target/classes/application.yml
 app-web/target/classes/import.sql
 app-web/target/classes/metainfo/
 app-web/target/generated-sources/
-sample.iml
 target/

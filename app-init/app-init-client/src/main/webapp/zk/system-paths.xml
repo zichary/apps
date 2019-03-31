@@ -1,0 +1,4 @@
+<!DOCTYPE root>
+<root label="Building management system">
+    <import label="會員管理" src="member/member_index.zul"/> <!-- 會員管理 -->
+</root>

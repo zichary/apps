@@ -19,7 +19,7 @@ public class BaseServiceImpl<T extends BaseDao, ID> implements BaseService<T, ID
 
     private JpaRepository<T, ID> repository;
 
-    public BaseServiceImpl(JpaRepository<T, ID> repository) {
+    BaseServiceImpl(JpaRepository<T, ID> repository) {
         this.repository = repository;
     }
 

@@ -1,0 +1,24 @@
+<?variable-resolver class="org.zkoss.zkplus.spring.DelegatingVariableResolver"?>
+<zk>
+    <style>
+        .nav_text { color: #696569; font-size : 24px; font-weight: bold;}
+        .nav_tabs { font-size : 12px;}
+    </style>
+    <div width="100%" height="100%" viewModel="@id('vm') @init('com.apps.web.MainVM')">
+        <!-- Sky Start -->
+        <div>
+            <!-- logo -->
+            <div/>
+            <!-- title -->
+            <label value="${labels.system.title}" sclass="nav_text"/>
+        </div>
+        <!-- Sky End -->
+        <separator height="10px"/>
+        <!-- Center Start -->
+        <include src="@load(vm.currentPage.uri)"/>
+        <!-- Center End -->
+        <div>
+            <label value="Copyright © 2016-2019 XXXXX. Corporation All rights reserved."/>
+        </div>
+    </div>
+</zk>

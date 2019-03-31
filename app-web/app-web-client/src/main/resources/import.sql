@@ -1,0 +1,6 @@
+INSERT INTO test.role (id, action, alive, create_address, create_date, create_user, update_address, update_date, update_user, auth_desc, authority) VALUES ('297ec56069a3c61c0169a3c794e80001', true, true, '127.0.0.1', '2019-03-22 05:02:40', 'TEST', '127.0.0.1', '2019-03-22 05:02:40', 'TEST', '管理員', 'ADMIN');
+INSERT INTO test.role (id, action, alive, create_address, create_date, create_user, update_address, update_date, update_user, auth_desc, authority) VALUES ('297ec56069a3c61c0169a3c7d2c40002', true, true, '127.0.0.1', '2019-03-22 05:02:56', 'TEST', '127.0.0.1', '2019-03-22 05:02:56', 'TEST', '使用者', 'USER');
+
+INSERT INTO test.user (id, action, alive, create_address, create_date, create_user, update_address, update_date, update_user, account_non_expired, account_non_locked, credentials_non_expired, enabled, job_number, name, nik_name, password, username) VALUES ('297ec56069a3ec810169a3ec8f150000', true, true, '127.0.0.1', '2019-03-22 05:43:03', 'Test', '127.0.0.1', '2019-03-22 05:43:03', 'Test', true, true, true, true, '00001', '測試員', '測試員', 'admin', 'admin');
+
+INSERT INTO test.user_authority (user_id, authority_id) VALUES ('297ec56069a3ec810169a3ec8f150000', '297ec56069a3c61c0169a3c794e80001');

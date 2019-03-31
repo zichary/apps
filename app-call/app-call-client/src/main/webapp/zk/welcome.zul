@@ -1,0 +1,12 @@
+<zk>
+    <!-- menu Start -->
+    <div>
+        <button label="${labels.menu.pare}" image="/images/zkpowered_l.png" width="150px" height="150px"
+                orient="vertical" dir="reverse" target="_self"
+                onClick="@command('navigate', page='pare',label=self.label)"/>
+        <button label="${labels.menu.anpl}" image="/images/zkpowered_l.png" width="150px" height="150px"
+                orient="vertical" dir="reverse" target="_self"
+                onClick="@command('navigate', page='anpl',label=self.label)"/>
+    </div>
+    <!-- menu End -->
+</zk>

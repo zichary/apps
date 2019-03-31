@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <modules>
-        <module>app-web-server</module>
-        <module>app-web-client</module>
+        <module>app-init-server</module>
+        <module>app-init-client</module>
     </modules>
 
     <parent>
@@ -14,7 +14,7 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>app-web</artifactId>
+    <artifactId>app-init</artifactId>
     <packaging>pom</packaging>
     <name>app-web</name>
 
